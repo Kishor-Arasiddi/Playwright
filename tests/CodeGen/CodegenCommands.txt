@@ -1,0 +1,25 @@
+CodeGen:
+
+By using codegen we can record the scripts automatically 
+
+commands:
+==> npx playwright codegen
+     1. This will open new windowa one is browser and another one is it's editor from there we can record 
+the scripts automatically without writing the scripts.
+     2. But by using this command it won't create file in our editor automatically we need to copy the scripts and create new file by ourself and need to paste
+the copied scripts into file to avoid this we have another command (refer below command)
+
+==> npx playwright codegen -o tests/<filename.spec.ts>         here o->output
+==> npx playwright codegen --output tests/<filename.spec.ts> 
+     1. By using this command automatically create the file and also scripts also be there in this file
+here we don't need to do like above.
+
+
+==> npx playwright codegen -o tests/<filename.spec.ts> --device "iphone 15"
+     1. This command will open whichever device you mentioned we can start executing in that device too.
+
+
+==>  npx playwright codegen -o tests/<filename.spec.ts> -b chromium/firefox
+==>  npx playwright codegen -o tests/<filename.spec.ts> --browser chromium/firefox
+     1. This command will oprn specific provided browser
+
