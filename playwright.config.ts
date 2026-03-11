@@ -19,7 +19,7 @@ export default defineConfig({
   // //Change the timeout globally for assertions (default = 5000ms -> 5s )
   // expect:{timeout:10000},
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -28,6 +28,9 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+  //This is tag used in below
+  // grep:/@Sanity/,               // Added by me
+  // grepInvert:/@Regression/,     // Added by me
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -43,8 +46,8 @@ export default defineConfig({
       name: 'chromium',
       use: {
            ...devices['Desktop Chrome'],
-            // viewport:null,
-            ignoreHTTPSErrors:true
+            // viewport:null,  //added by me
+            ignoreHTTPSErrors:true   //added by me
        },
     },
 

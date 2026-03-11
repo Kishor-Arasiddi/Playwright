@@ -22,8 +22,3 @@ test("Autowaiting Functionality",async({page})=>{
     expect(search).toBeVisible({timeout:15000})
     expect(searchBtn).toBeEnabled()
 })
-
-//Assertions
-//There are 2 types of assertions
-//1: Auto-retrying --> Automatically retries untill it passes or time out
-//2: Non-retrying  --> Executes immediatly no retry

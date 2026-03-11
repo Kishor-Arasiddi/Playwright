@@ -1,0 +1,23 @@
+Groups:
+describe - It is used to group the tests
+
+-> To execute groups use below command
+npx playwright test <filename> --grep "<groupname>"
+Example : npx playwright test login.spec.ts --grep "group1"
+
+Tags:
+-> To execute tags use below command
+npx playwright test <filename> --grep "<@tagname>"
+Example: npx playwright test login.spec.ts --grep "@sanity"
+
+-> To execute multiple tags which is belonged to tests use below command
+npx playwright test <filename> --grep (?=.*@tagname) (?=.*@tagname)
+Example: npx playwright test login.spec.ts --grep (?=.*@Sanity) (?=.*@Regression)
+
+-> To execute tags which belongs to either tag1 or tag2 use below command
+npx playwright test <filename> --grep "@tag1|@tag2"
+Example: npx playwright test login.spec.ts --grep "@Sanity|@Regression"
+
+-> To execute tag1 which not belongs to the tag2 use below command
+npx playwright test <filename> --grep "@tag1" --grep-invert "@tag2"
+Example: npx playwright test login.spec.ts --grep "@Sanity" --grep-invert "@Regression"
