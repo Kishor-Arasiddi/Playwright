@@ -25,7 +25,8 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  // workers: process.env.CI ? 1 : undefined,
+  // workers:5,                                  //Added by me
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   //This is tag used in below
@@ -47,7 +48,8 @@ export default defineConfig({
       use: {
            ...devices['Desktop Chrome'],
             // viewport:null,  //added by me
-            ignoreHTTPSErrors:true   //added by me
+            ignoreHTTPSErrors:true,   //added by me
+            channel:'chrome'   //added by me
        },
     },
 
