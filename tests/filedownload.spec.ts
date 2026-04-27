@@ -28,7 +28,7 @@ test("Verify the Text file download functionlaity",async({page})=>{
    }
 })
 
-test.only("Verify the PDF file download functionlaity",async({page})=>{
+test("Verify the PDF file download functionlaity",async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/p/download-files_25.html");
     await page.locator('#inputText').fill("Hello Playwright!!!");
     await page.locator('#generatePdf').click();

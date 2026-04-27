@@ -1,7 +1,7 @@
 import{test,Locator,expect} from "@playwright/test";
 
 //Checkbox actions
-test.only("Checkbox Actions",async({page})=>{
+test("Checkbox Actions",async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
     //Select specific checkbox
     let sundayCheckbox = page.getByLabel("Sunday")
