@@ -19,6 +19,6 @@ test("Autowaiting Functionality",async({page})=>{
     await searchBtn.click({force:true});
 
     // Here timeout is used to change for test level for assertions
-    expect(search).toBeVisible({timeout:15000})
-    expect(searchBtn).toBeEnabled()
+    await expect(search).toBeVisible({timeout:15000})
+    await expect(searchBtn).toBeEnabled()
 })
