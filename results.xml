@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="14.602651">
+<testsuite name="keyboard.spec.ts" timestamp="2026-05-06T10:35:05.421Z" hostname="chromium" tests="2" failures="0" skipped="0" time="13.104" errors="0">
+<testcase name="Verify Keyboard Actions" classname="keyboard.spec.ts" time="6.645">
+</testcase>
+<testcase name="Keyboard Actions: Simple Way" classname="keyboard.spec.ts" time="6.459">
+</testcase>
+</testsuite>
+</testsuites>

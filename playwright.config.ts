@@ -24,23 +24,44 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
+
+  /* Retry on locally */
+  //  retries: 3,                               //by Kishor
+
   /* Opt out of parallel tests on CI. */
-  // workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : undefined,
   // workers:5,                                  //Added by me
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  // reporter: 'html',
+
+  //So here when we give different output folder if we execute npx playwright show-report it will open previous folder report.
+  //After configuring the folder in playwright.config.ts from then need to execute below command
+  //Need run the command as: npx playwright show-report <folder name>
+  //Through command prompt also we can execute: npx playwright test --reporter=html
+
+  /* reporter:[['html',{open:'always','outputFolder':'html-report'}],
+           ['list'],
+           ['line'],
+           ['dot'],
+           ['junit',{outputFile:'results.xml'}],
+           ['json',{outputFile:'results.json'}]
+           ],  */
+
+  //Allure Report
+  reporter:'allure-playwright',
+
   //This is tag used in below
-  // grep:/@Sanity/,               // Added by me
-  // grepInvert:/@Regression/,     // Added by me
+  // grep:/@Sanity/,                        // Added by me
+  // grepInvert:/@Regression/,             // Added by me
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'off',
-    screenshot:'only-on-failure',
-    video:'retain-on-failure'
+    trace: 'retain-on-failure',
+    screenshot:'only-on-failure',             //by kishor
+    video:'retain-on-failure'               // by kishor
   },
 
   /* Configure projects for major browsers */
