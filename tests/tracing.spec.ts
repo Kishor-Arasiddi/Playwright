@@ -17,12 +17,14 @@ test('test', async ({ page }) => {
 
 
 //Here from the test also we can add trace configurations
-//Using context only we can add configurations for the tracing without context not possible
+//Using context only we can add configurations for the tracing, without context not possible
 //Limitation of this approach is, "in HTML report we can't see the trace report"
 
 //To open generated trace zip file need to run below command, we can't unzip directly
-// npx playwright show-trace trace.zip
-test.only('test trace', async ({ page, context }) => {
+//1) npx playwright show-trace trace.zip
+//2) Using playwright utility --> https://trace.playwright.dev/ (Here simply add the trace.zip file)
+
+test('test trace', async ({ page, context }) => {
   await context.tracing.start({ screenshots: true, snapshots: true });
 
   await page.goto('https://tutorialsninja.com/demo/');
