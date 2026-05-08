@@ -1,3 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1621","Create Post request using static body","chromium","2026-05-08","passed","2026-05-08","","apitests/post_api_request_01_createBooking.spec.ts","",""
 "","9128","Verify Keyboard Actions","chromium","2026-05-06","passed","2026-05-06","","keyboard.spec.ts","",""
 "","9966","Keyboard Actions: Simple Way","chromium","2026-05-06","passed","2026-05-06","","keyboard.spec.ts","",""
