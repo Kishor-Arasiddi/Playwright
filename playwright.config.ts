@@ -32,7 +32,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   // workers:5,                                  //Added by me
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  // reporter: 'html',
+  reporter: 'html',
 
   //So here when we give different output folder if we execute npx playwright show-report it will open previous folder report.
   //After configuring the folder in playwright.config.ts from then need to execute below command
@@ -48,7 +48,10 @@ export default defineConfig({
            ],  */
 
   //Allure Report
-  reporter:'allure-playwright',
+  // reporter:'allure-playwright',
+  //npx allure generate ./allure-results
+  //npx allure generate ./allure-results --clean
+  //npx allure open ./allure-report
 
   //This is tag used in below
   // grep:/@Sanity/,                        // Added by me
@@ -56,7 +59,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'https://restful-booker.herokuapp.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
