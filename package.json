@@ -9,11 +9,14 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
+    "@types/luxon": "^3.7.1",
     "@types/node": "^24.12.2",
     "allure-playwright": "^3.7.2"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.4.0",
     "csv-parse": "^6.1.0",
+    "luxon": "^3.7.2",
     "xlsx": "^0.18.5"
   }
 }
