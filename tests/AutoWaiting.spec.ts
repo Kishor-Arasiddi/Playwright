@@ -15,7 +15,7 @@ test("Autowaiting Functionality",async({page})=>{
     // It will forcefully do the action
     // force action is only work actions not for the assertions
     await search.fill("Samsung",{force:true})
-    let searchBtn=page.locator("[type='submit']")
+    let searchBtn=page.locator(".search-box-button")
     await searchBtn.click({force:true});
 
     // Here timeout is used to change for test level for assertions

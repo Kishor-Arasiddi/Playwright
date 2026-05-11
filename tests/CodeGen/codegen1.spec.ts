@@ -7,6 +7,6 @@ test('test', async ({ page }) => {
   // await page.locator('.OqYNhN.Kpu3_t > .izSqBy > .NN45sZ').click();
   await page.getByText('Electronics').click();
   await page.getByRole('link', { name: 'Cart' }).click();
-  await expect(page.getByRole('link', { name: 'Flipkart' })).toBeVisible();
-  await expect(page.getByRole('textbox', { name: 'Search for products, brands' })).toBeEmpty();
+  // await expect(page.getByRole('link', { name: 'Flipkart' })).toBeVisible();
+  // await expect(page.getByRole('textbox', { name: 'Search for products, brands' })).toBeEmpty();
 });

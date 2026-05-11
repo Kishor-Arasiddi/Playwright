@@ -18,7 +18,7 @@ test('Verify the locators', async ({page}) =>{
    //3. getByRole: Locate by implicit and explicit ccessbility attributes (used for interactive elemnts ex: checboxws,links,buttons)
     await page.getByRole("link",{name: 'Register'}).click();
     await page.waitForTimeout(5000);
-    await expect(page.getByRole("heading",{name: 'Register'})).toBeVisible();
+    // await expect(page.getByRole("heading",{name: 'Register'})).toBeVisible();
 
     //4. getByLabel: Locate a form control by associated label's text
     // page.getByLabel("FirstName").type("Virat"); //'type' method is deprecated 

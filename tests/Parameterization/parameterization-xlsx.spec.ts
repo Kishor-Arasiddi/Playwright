@@ -20,14 +20,14 @@ const loginData:any = XLSX.utils.sheet_to_json(workSheet);
 console.log(loginData);
 
 test.describe("Login data driven testing", async() => {
-  for (const { email, password, validity } of loginData) {
+  for (const { email, password, validaity } of loginData) {
     test(`Login Test for ${email} and ${password}`, async ({ page }) => {
       await page.goto("https://demowebshop.tricentis.com/login");
       await page.locator("#Email").fill(email);
       await page.locator("#Password").fill(password);
       await page.locator("input[type='submit']").last().click();
 
-      if (validity === "valid") {
+      if (validaity === "valid") {
         const logOut = page.locator("a[href='/logout']");
         await expect(logOut).toBeVisible({ timeout: 5000 });
       } else {
