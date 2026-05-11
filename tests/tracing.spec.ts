@@ -24,7 +24,7 @@ test('test', async ({ page }) => {
 //1) npx playwright show-trace trace.zip
 //2) Using playwright utility --> https://trace.playwright.dev/ (Here simply add the trace.zip file)
 
-test('test trace', async ({ page, context }) => {
+/* test('test trace', async ({ page, context }) => {
   await context.tracing.start({ screenshots: true, snapshots: true });
 
   await page.goto('https://tutorialsninja.com/demo/');
@@ -38,4 +38,4 @@ test('test trace', async ({ page, context }) => {
   await page.locator('#top-links').getByRole('link', { name: 'Logout' }).click();
 
   await context.tracing.stop({ path: 'trace.zip' });
-});
+}); */

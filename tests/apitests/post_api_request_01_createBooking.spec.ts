@@ -25,7 +25,7 @@ test('Create Post request using static body',async({request})=>{
 
 // Send the post request
 // request.post('https://restful-booker.herokuapp.com/booking',{data:requestBody});
-//Here just gave booking endpoint url is in playwright.config.ts file in "baseurl"
+//Here just gave booking endpoint, url is in playwright.config.ts file in "baseurl"
 const response=await request.post('/booking',{data:requestBody});
 
 const responseBody=await response.json();  //Extracted response
